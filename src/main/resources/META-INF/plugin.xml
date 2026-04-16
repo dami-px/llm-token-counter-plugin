@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.predictx.tokencounter</id>
+    <name>LLM Token Counter</name>
+    <vendor>Dami</vendor>
+
+    <description><![CDATA[
+        Status-bar widget that shows an LLM token estimate for the current selection,
+        or for the whole file when nothing is selected. Uses JTokkit with the
+        <code>o200k_base</code> encoding (GPT-4o / o-series).
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory
+            id="com.predictx.tokencounter.widget"
+            implementation="com.predictx.tokencounter.TokenCountWidgetFactory"
+            order="last"/>
+    </extensions>
+</idea-plugin>
