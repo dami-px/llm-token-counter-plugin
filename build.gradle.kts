@@ -3,7 +3,7 @@ import java.util.Properties
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    id("org.jetbrains.intellij.platform") version "2.14.0"
 }
 
 val localProps = Properties().apply {
@@ -55,6 +55,6 @@ kotlin {
 
 tasks {
     wrapper {
-        gradleVersion = "8.10.2"
+        gradleVersion = "9.0.0"
     }
 }
