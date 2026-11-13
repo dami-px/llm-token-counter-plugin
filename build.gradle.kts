@@ -44,7 +44,13 @@ intellijPlatform {
 
         ideaVersion {
             sinceBuild = providers.gradleProperty("pluginSinceBuild")
-            untilBuild = providers.gradleProperty("pluginUntilBuild")
+            untilBuild = provider { null }
+        }
+    }
+
+    pluginVerification {
+        ides {
+            create("IU", "2026.3")
         }
     }
 }
